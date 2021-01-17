@@ -19,10 +19,14 @@ int main()
 	cout << "Ak si nechcel ist do videopozicovne stlac 2" << endl;
 	cout << "___________________________________________________________________________" << endl;
 	cin >> vstup;
-	if (vstup == 2) {
+	if (vstup < 1 || vstup > 1) {
+		cout << "Preco si tu nechcel ist :((( " << endl;
 		return 0;
 	}
+	
 	else if (vstup == 1) {}
+
+
 	while (true) {
 
 		cout << "Vitaj vo videopozicovni! " << endl;
