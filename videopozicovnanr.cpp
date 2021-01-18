@@ -14,6 +14,7 @@ int main()
 	string cistemeno;
 	string meno1, meno2, meno3, meno4, meno5;
 	int vstup = 0;
+	//vstup ano/nie//
 	cout << "Zdravim chces vstupit do videopozicovne?" << endl;
 	cout << "Ak chces vstupit do videopozicovne stlac 1" << endl;
 	cout << "Ak si nechcel ist do videopozicovne stlac 2" << endl;
@@ -28,14 +29,15 @@ int main()
 
 
 	while (true) {
-
+		//Hlavne menu//
 		cout << "Vitaj vo videopozicovni! " << endl;
 		cout << "___________________________________________________________________________" << endl;
 		cout << "Vyber podla cisla operaciu ktoru chces uskutocnit : " << endl;
 		cout << "1. Vyber filmu na pozicanie" << endl;
 		cout << "2. Zoznam pozicanych filmov" << endl;
 		cout << "3. Vratit film" << endl;
-
+		cout << "4. Odist z videopozicovne " << endl;
+		//vyberaniefilmu menu//
 		cin >> vyberfilmu;
 		switch (vyberfilmu) {
 		case 1:
@@ -51,8 +53,6 @@ int main()
 
 			cin >> vyberaniefilmu1;
 			
-
-
 
 
 			switch (vyberaniefilmu1) {
@@ -105,6 +105,7 @@ int main()
 				cin >> meno5;
 				skuska4 = 5;
 				break;
+				//vyberanie nahodneho filmu//
 			case 6:
 				int nahodnyfilm;
 				int nwmco;
@@ -112,7 +113,7 @@ int main()
 				nahodnyfilm = (rand() % 5 + 1);
 				if (nahodnyfilm == 1) {
 					if (skuska == 1) {
-						cout << "Tvoj nahodne film je zial pozicany, mozes to sksuit znova a dufat ze ti nepadne uz pozicany film :D, alebo si mozes pozriet pozicane filmy v zozname pozicanych filmov a vybrat si sam! " << endl;
+						cout << "Tvoj nahodne vybraty film je zial pozicany, mozes to sksuit znova a dufat ze ti nepadne uz pozicany film :D, alebo si mozes pozriet pozicane filmy v zozname pozicanych filmov a vybrat si sam! " << endl;
 						break;
 					}
 					cout << "Tvoj nahodne vybraty film je: Spiderman! " << endl;
@@ -123,7 +124,7 @@ int main()
 				if (nahodnyfilm == 2) {
 					if (skuska1 == 2)
 					{
-						cout << "Tvoj nahodne film je zial pozicany, mozes to sksuit znova a dufat ze ti nepadne uz pozicany film :D, alebo si mozes pozriet pozicane filmy v zozname pozicanych filmov a vybrat si sam! " << endl;
+						cout << "Tvoj nahodne vybraty film je zial pozicany, mozes to sksuit znova a dufat ze ti nepadne uz pozicany film :D, alebo si mozes pozriet pozicane filmy v zozname pozicanych filmov a vybrat si sam! " << endl;
 						break;
 					}
 					cout << "Tvoj nahodne vybraty film je: Lego Film! " << endl;
@@ -134,7 +135,7 @@ int main()
 				if (nahodnyfilm == 3) {
 					if (skuska2 == 3)
 					{
-						cout << "Tvoj nahodne film je zial pozicany, mozes to sksuit znova a dufat ze ti nepadne uz pozicany film :D, alebo si mozes pozriet pozicane filmy v zozname pozicanych filmov a vybrat si sam! " << endl;
+						cout << "Tvoj nahodne vybraty film je zial pozicany, mozes to sksuit znova a dufat ze ti nepadne uz pozicany film :D, alebo si mozes pozriet pozicane filmy v zozname pozicanych filmov a vybrat si sam! " << endl;
 						break;
 					}
 					cout << "Tvoj nahodne vybraty film je: Avengers-Endgame! " << endl;
@@ -145,7 +146,7 @@ int main()
 				if (nahodnyfilm == 4) {
 					if (skuska3 == 4)
 					{
-						cout << "Tvoj nahodne film je zial pozicany, mozes to sksuit znova a dufat ze ti nepadne uz pozicany film :D, alebo si mozes pozriet pozicane filmy v zozname pozicanych filmov a vybrat si sam! " << endl;
+						cout << "Tvoj nahodne vybraty film je zial pozicany, mozes to sksuit znova a dufat ze ti nepadne uz pozicany film :D, alebo si mozes pozriet pozicane filmy v zozname pozicanych filmov a vybrat si sam! " << endl;
 						break;
 					}
 					cout << "Tvoj nahodne vybraty film je: Taxi 5! " << endl;
@@ -156,7 +157,7 @@ int main()
 				if (nahodnyfilm == 5) {
 					if (skuska4 == 5)
 					{
-						cout << "Tvoj nahodne film je zial pozicany, mozes to sksuit znova a dufat ze ti nepadne uz pozicany film :D, alebo si mozes pozriet pozicane filmy v zozname pozicanych filmov a vybrat si sam! " << endl;
+						cout << "Tvoj nahodne vybraty film je zial pozicany, mozes to sksuit znova a dufat ze ti nepadne uz pozicany film :D, alebo si mozes pozriet pozicane filmy v zozname pozicanych filmov a vybrat si sam! " << endl;
 						break;
 					}
 					cout << "Tvoj nahodne vybraty film je: Rychlo a zbesilo 8! " << endl;
@@ -171,6 +172,7 @@ int main()
 				break;
 
 			}break;
+			//zapis filmov//
 		case 2:
 			cout << "Pozicane filmy na zozname su tieto: " << endl;
 			cout << "Spiderman          - " << meno1 << endl;
@@ -179,6 +181,7 @@ int main()
 			cout << "Taxi 5             - " << meno4 << endl;
 			cout << "Rychlo a zbesilo 8 - " << meno5 << endl;
 			break;
+			//vracanie filmov//
 		case 3:
 			cout << "Rozhodol si sa vratit film, napis presne svoje meno ktore si zadaval pri pozicavani filmu (dodrziavaj male a velke pismena)" << endl;
 			cin >> cistemeno;
@@ -186,30 +189,38 @@ int main()
 				cout << "Uspesne si vratil film Spiderman! " << endl;
 				meno1 = "";
 				skuska = 0;
+				break;
 			}
 			else if (meno2 == cistemeno) {
 				cout << "Uspesne si vratil film Lego film! " << endl;
 				meno2 = "";
 				skuska1 = 0;
+				break;
 			}
 			else if (meno3 == cistemeno) {
 				cout << "Uspesne si vratil film Avengers-Endgame! " << endl;
 				meno3 = "";
 				skuska2 = 0;
+				break;
 			}
 			else if (meno4 == cistemeno) {
 				cout << "Uspesne si vratil film Taxi 5! " << endl;
 				meno4 = "";
 				skuska3 = 0;
+				break;
 			}
 			else if (meno5 == cistemeno) {
 				cout << "Uspesne si vratil film Rychlo a zbesilo 8! " << endl;
 				meno5 = "";
 				skuska4 = 0;
+				break;
 			}
 			else if (cistemeno == cistemeno) {
 				cout << "Nemas poziciany ziadny film alebo si zadal zle meno! " << endl;
+				break;
 			}
+		case 4:
+			return 0;
 		}
 		system("PAUSE");
 	}
